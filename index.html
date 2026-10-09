@@ -111,9 +111,34 @@
       />
       <span class="font-bold text-lg md:text-xl tracking-tight">HYUNJINHUB</span>
     </div>
-    <div class="flex items-center gap-4 md:gap-6 text-sm">
-      <button onclick="showHistory()" class="text-zinc-400 hover:text-white transition-colors hidden sm:block">History</button>
-      <a href="#" class="text-zinc-400 hover:text-white transition-colors">Main Site</a>
+    <div class="flex items-center gap-3 md:gap-5 text-sm">
+      <!-- Tombol Riwayat Lisensi -->
+      <button 
+        onclick="showHistory()" 
+        class="flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors px-2.5 py-1.5 rounded-lg hover:bg-white/5"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+          <path d="M3 3v5h5"/>
+          <path d="M12 7v5l4 2"/>
+        </svg>
+        <span class="hidden sm:inline">Riwayat Lisensi</span>
+      </button>
+
+      <!-- Tombol Main Site -->
+      <a 
+        href="https://noellandxyza.github.io/" 
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors px-2.5 py-1.5 rounded-lg hover:bg-white/5"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+          <polyline points="9 22 9 12 15 12 15 22"/>
+        </svg>
+        <span class="hidden sm:inline">Main Site</span>
+      </a>
+
       <div id="nav-user" class="hidden items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-sm">
         <span class="w-2 h-2 rounded-full bg-green-400"></span>
         <span id="nav-username" class="text-zinc-300"></span>
@@ -340,7 +365,6 @@
   <!-- Welcome Modal -->
   <div id="welcome-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 modal-backdrop">
     <div class="w-full max-w-md glass-card rounded-2xl p-8 shadow-2xl border border-white/10 relative">
-      <!-- Logo -->
       <div class="flex justify-center mb-6">
         <img 
           src="https://raw.githubusercontent.com/noellandxyza/noellandxyza.github.io/refs/heads/main/Keysystem/logo.png" 
@@ -385,7 +409,6 @@
         Lanjutkan ke Beranda
       </button>
 
-      <!-- Info box -->
       <div class="rounded-xl bg-zinc-900/50 border border-white/5 p-4">
         <div class="flex items-start gap-2.5">
           <span class="text-amber-400 mt-0.5">
@@ -453,13 +476,20 @@
     ✓ Pembayaran dicatat! Hubungi admin untuk verifikasi key.
   </div>
 
-  <!-- History Modal -->
+  <!-- History Modal (Riwayat Lisensi) -->
   <div id="history-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 modal-backdrop">
     <div class="w-full max-w-md glass-card rounded-2xl p-8 shadow-2xl border border-white/10 relative max-h-[80vh] overflow-y-auto">
       <button onclick="closeHistory()" class="absolute top-4 right-4 text-zinc-500 hover:text-white transition-colors">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
       </button>
-      <h2 class="text-xl font-bold mb-6">Riwayat Pembelian</h2>
+      <div class="flex items-center gap-2 mb-6">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-purple-400">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+          <path d="M3 3v5h5"/>
+          <path d="M12 7v5l4 2"/>
+        </svg>
+        <h2 class="text-xl font-bold">Riwayat Lisensi</h2>
+      </div>
       <div id="history-list" class="space-y-3">
         <p class="text-zinc-500 text-sm text-center py-8">Belum ada riwayat pembelian.</p>
       </div>
